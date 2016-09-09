@@ -1,0 +1,10 @@
+Almaty:Kazakhstan
+Astana:Kazakhstan
+Tokyo:Japan
+London:England
+Bristol:England
+Moscow:Russia
+Paris:France
+Karagandy:Kazakhstan
+Voronezh:Russia
+Marseille:France
