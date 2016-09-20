@@ -71,7 +71,9 @@ public class StudentViewer{
   
   }
   public static void listWithProfileInfo(ArrayList<Student> students){
-  
+  	for (Student student:students){
+		System.out.println(student.name+" "+student.surname+" ");
+	}
   }
   public static ArrayList<Student> filterStudents(String type,String input){
     
