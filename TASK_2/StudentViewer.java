@@ -28,7 +28,7 @@ public class StudentViewer{
     /*
      * Output: ['S. Zhamanov A03','Z. Argynbayev C03']
      */
-    HashSet<Club> clubsOfB03 = clubs.get("B03").clubsOfStudents();
+    HashSet<Club> clubsOfB03 = groups.get("B03").clubsOfStudents();
     System.out.println(clubsOfB03);
     /*
      * ['Sport','Sana','Dance']
@@ -36,6 +36,38 @@ public class StudentViewer{
     
   }
   public static void loadFromFile(){
+
+	try(Scanner in = new Scanner(new File("students.txt"))){
+		while (in.hasNextLine()){
+			String line = in.nextLine();
+			String parts[] = line.split(" ");
+			Student s = new Student(parts[0],parts[1],parts[2]);
+			students.add(s);
+			if (studentsByGroups.containsKey(parts[3])){
+				studentsByGroups.get(parts[3]).add(s);
+			}
+			else{
+				ArrayList<Student> studs = new ArrayList<>();
+				studs.add(s);
+				studentsByGroups.put(parts[3],studs);
+			}
+			Group g = new Group(parts[3]);
+			groups.put(parts[3],g);
+			String clubNames[] = parts[4].split(",");
+			for (String clubName:clubNames){
+				Club club = new Club(clubName);
+				clubs.put(clubName,club);
+				if (studentsByClubs.containsKey(clubName){
+					clubs.get(clubName).add(s);
+				}
+				else{
+					ArrayList<Student> studs = new ArrayList<>();
+					studs.add(s);
+					studentsByClubs.put(clubName,studs);
+				}
+			}
+		}
+	}
   
   }
   public static void listWithProfileInfo(ArrayList<Student> students){
