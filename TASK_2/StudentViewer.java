@@ -14,9 +14,9 @@ public class StudentViewer{
     listWithProfileInfo(groups.get("A03").students);
     /*
      * Output students
-     * Arman Baymyshev Clubs:Shapagat,Sana;17 years old
-     * Samat Zhamanov Clubs:Sport,Shapagat;18 years old
-     * Almas Nurhozhaev Clubs:Sport,Shapagat,Sana;16 years old
+     * Arman Baymyshev 17 years old
+     * Samat Zhamanov 18 years old
+     * Almas Nurhozhaev 16 years old
      */
     ArrayList<Student> studentsFound = filterStudents("nameandsurname","zhan");
     System.out.println(studentsFound);
