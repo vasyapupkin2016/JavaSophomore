@@ -58,7 +58,7 @@ public class StudentViewer{
 				Club club = new Club(clubName);
 				clubs.put(clubName,club);
 				if (studentsByClubs.containsKey(clubName){
-					clubs.get(clubName).add(s);
+					studentsByClubs.get(clubName).add(s);
 				}
 				else{
 					ArrayList<Student> studs = new ArrayList<>();
