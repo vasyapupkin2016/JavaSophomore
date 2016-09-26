@@ -1,0 +1,12 @@
+
+public class Student{
+  String name,surname;
+  int BY = 0; // Birth year
+Student(String name,String surname){
+	this.name = name;
+	this.surname = surname;
+}
+  public String toString(){
+	  return name+" "+surname;
+  }
+}
