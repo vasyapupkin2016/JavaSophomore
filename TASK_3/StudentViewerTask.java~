@@ -30,7 +30,7 @@ public class StudentViewerTask {
 	}
 	public static void loadValues(HashMap<String,ArrayList<Student>> maps,ArrayList<Student> students){
 		try{
-			List<String> lines = Files.readAllLines(Paths.get(".", "students.txt"),StandardCharsets.UTF_8);
+			List<String> lines = Files.readAllLines(Paths.get(".", "src/students.txt"),StandardCharsets.UTF_8);
 			lines.forEach((line)->{
 				String parts[] = line.split(" ");
 				Student s = new Student(Integer.parseInt(parts[0]),parts[1],parts[2],Integer.parseInt(parts[3]),parts[4],parts[5].split(";"),Integer.parseInt(parts[6]));
